@@ -1,4 +1,4 @@
-from odoo import api, fields, models, _
+from odoo import api, models,
 
 
 class SaleOrderInherit(models.Model):
@@ -15,7 +15,7 @@ class SaleOrderInherit(models.Model):
             'type': 'ir.actions.client',
             'tag': 'display_notification',
             'params': {
-                 'title': _('Warning!'),
+                 'title': ('Warning!'),
                  'message': (
                     'Vous avez ajouté l’article ', line[1].product_id.name, 'en double, avec un prix unitaire de',
                     line[0].price_unit),
